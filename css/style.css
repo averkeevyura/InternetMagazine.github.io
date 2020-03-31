@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Bebas Neue', cursive;
+}
+
+ul, li, a , p {
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*----------header----------*/
+
+header {
+	
+}
+
+.container {
+	margin: 0 auto;
+	width: 992px;
+}
+
+.row {
+
+}
+
+.box {
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+
+.logo {
+	font-family: 'Lobster', cursive;
+	font-size: 49px;
+	color: #3cc3b5;
+}
+
+.search {
+	margin-top: 10px;
+	/* устанавливаем необходимую ширину формы в зависимости от дизайна
+	** форма без проблем растягивается */
+	width: 436px;
+
+	/* кнопку отправки будем позиционировать абсолютно,
+	** поэтому необходимо это свойство */
+	position: relative;
+}
+
+.search input {
+	/* отключаем бордюры у инпутов */
+	border: none;
+}
+
+/* стили для поля ввода */
+.search .input {
+	/* растягиваем поле ввода на всю ширину формы */
+	width: 100%;
+
+	/* за счет верхнего (8px) и нижнего (9px) внутренних отступов
+	** регулируем высоту формы
+	** внутренний отступ справа (37px) делаем больше левого,
+	** т.к. там будет размещена кнопка отправки	*/
+	padding: 7px 37px 8px 15px;
+
+	/* чтобы ширина поля ввода (100%) включала в себя внутренние отступы */
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	/* добавляем внутренние тени */
+	/*box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);*/
+
+	/* закругляем углы */
+	border-radius: 0;
+	border: 1px solid #e1e1e1;
+	background: #fff;
+	font: 13px Tahoma, Arial, sans-serif;
+	color: #555;
+	outline: none;
+}
+
+/* меняем оформление поля ввода при фокусе */
+.search .input:focus {
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+	background: #E8E8E8;
+	color: #333;
+}
+
+/* оформляем кнопку отправки */
+.search .submit {
+	/* позиционируем кнопку абсолютно от правого края формы */
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 37px;
+
+	/* растягиваем кнопку на всю высоту формы */
+	height: 100%;
+
+	cursor: pointer;
+	background: url(../img/icons/search.png) 50% no-repeat;
+	
+	/* добавляем прозрачность кнопке отправки */
+	opacity: 0.5;
+}
+
+/* при наведении курсора меняем прозрачность кнопки отправки */
+.search .submit:hover {
+	opacity: 0.8;
+}
+
+/* данное свойство необходимо для того, чтобы в браузерах
+** Chrome и Safari можно было стилизовать инпуты */
+input[type="search"] {
+	-webkit-appearance: none;
+}
+
+.buy {
+	display: flex;
+	margin-top: 10px;
+}
+
+.buy-img {
+
+}
+
+.buy-price {
+	color: #a1a1a1;
+	font-size: 33px;
+	margin-left: 13px;
+}
+
+.nav {
+	background: #4ccfc1;
+	padding: 10px 0 9px 0;
+}
+
+.nav-menu {
+
+}
+
+.nav-menu__list {
+	display: flex;
+	
+}
+
+.nav-menu__item {
+	display: flex;
+	margin: 0 20px 0 19px;
+}
+
+.nav-menu__item a {
+	color: #fff;
+	font-size: 21px;
+}
+
+.nav-menu__item:before {
+	content: '';
+	position: relative;
+	right: 20px;
+	top: 4px;
+	width: 2px;
+	height: 17px;
+	background: #fff;
+}
+
+.nav-menu__item:first-child:before {
+	display: none;
+}
+
+.nav-menu__item:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+/*--------------------*/
+
+/*----------slider-1----------*/
+
+.slider-bg {
+	background-color: #40c4b6;
+}
+
+.box-slider__item {
+	display: flex;
+	padding: 66px 0 50px 0;
+	color: #fff;
+}
+
+.box-slider__clothes {
+	margin-right: 100px;
+}
+
+.box-slider__offer h1 {
+	font-size: 61px;
+	line-height: 54px;
+	font-weight: 500;
+}
+
+.box-slider__offer p {
+	font-size: 17px;
+	line-height: 28px;
+	font-family: 'Open Sans';
+	padding-top: 22px;
+	padding-bottom: 24px;
+	padding-right: 228px;
+}
+
+.box-slider__btn a {
+	color: #fff;
+	font-size: 27px;
+	padding: 10px 24px;
+	border: 3px solid #fff;
+	border-radius: 7px;
+	display: inline-block;
+	line-height: 19px;
+}
+
+.box-slider__btn a:hover {
+	text-decoration: underline;
+}
+
+/* Слайдер */ 
+.slick-slider{
+	
+} 
+/* Слайдер запущен */ 
+.slick-slider.slick-initialized{
+
+} 
+/* Слайдер с точками */ 
+.slick-slider.slick-dotted{
+
+} 
+
+/* Ограничивающая оболочка */ 
+.slick-list {
+	overflow: hidden;
+
+}
+
+/* Лента слайдов */ 
+.slick-track{
+	display: flex;
+
+	
+} 
+
+/* Слайд */ 
+.slick-slide{
+	
+} 
+/* Слайд активный (показывается) */ 
+.slick-slide.slick-active{
+
+} 
+/* Слайд основной */ 
+.slick-slide.slick-current{
+
+} 
+/* Слайд по центру */ 
+.slick-slide.slick-center{
+
+} 
+/* Клонированный слайд */ 
+.slick-slide.slick-cloned{
+	
+}
+
+/* Стрелка */ 
+.slick-arrow{
+
+} 
+/* Стрелка влево */ 
+.slick-arrow.slick-prev{
+
+} 
+/* Стрелка вправо */ 
+.slick-arrow.slick-next{
+
+} 
+/* Стрелка не активная */ 
+.slick-arrow.slick-disabled{
+
+}
+
+/* Точки (булиты) */ 
+.slick-dots{
+
+} 
+.slick-dots li{
+
+} 
+/* Активная точка */ 
+.slick-dots li.slick-active{
+
+} 
+/* Элемент точки */ 
+.slick-dots li button{
+
+}
+
+.box-slider .slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 550px;
+	left: calc(50% - 55px);
+}
+
+.box-slider .slick-dots li {
+	list-style: none;
+	margin: 0 13px;
+}
+
+.box-slider .slick-dots li.slick-active button{
+	background-color: #77d8d1;
+}
+
+.box-slider .slick-dots button{
+	font-size: 0;
+	width: 9px;
+	height: 9px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: none;
+	padding: 0;
+}
+
+/*--------------------*/
+
+/*----------slider-2----------*/
+
+.slider-products {
+	position: relative;
+	display: flex;
+	
+	margin: 25px 0 20px 0;
+}
+
+.slider-products-item {
+	display: flex;
+	width: 330px;
+	height: 151px;
+}
+
+.slider-products-item__box {
+
+}
+
+.slider-products-item__img {
+	width: 217px;
+	height: 151px;
+}
+
+.slider-products-item__img img {
+	
+	height: 100%;
+}
+
+
+.slider-products-item__title {
+	color: #afafaf;
+	line-height: 25px;
+	font-size: 27px;
+	padding: 27px 0 20px 0;
+}
+
+.slider-products-item__btn a {
+	color: #fff;
+}
+
+.slider-products-item__btn  {
+	line-height: 19px;
+	font-size: 19px;
+	padding: 9px 14px;
+	color: #fff;
+	background: #3cc395;
+	border-radius: 4px;
+	display: inline-block;
+	transition: 0.3s;
+}
+
+.slider-products-item__btn:hover {
+	text-decoration: underline;
+	background: #2da89b;
+}
+
+.slider-products .slick-arrow {
+	position: absolute;
+	top: calc(50% - 44px);
+	cursor: pointer;
+}
+
+.slider-products .slick-arrow.slick-prev {
+	left: -260px;
+	background: url(../img/icons/arrowleft.png) no-repeat;
+	font-size: 0;
+	border: 0;
+	width: 29px;
+	height: 88px;
+} 
+
+.slider-products .slick-arrow.slick-next {
+	right: -260px;
+	background: url(../img/icons/arrowright.png) no-repeat;
+	font-size: 0;
+	border: 0;
+	width: 29px;
+	height: 88px;
+}
+
+.slider-products .slick-track{
+	display: flex;
+}
+
+/*--------------------*/
+
+/*----------Секция-products----------*/
+
+.feature {
+	background: #3fc8b2;
+}
+
+.feature-title {
+	padding: 20px 0 20px 57px;
+}
+
+.feature-title h2 {
+	font-size: 31px;
+	color: #fff;
+	line-height: 25px;
+}
+
+/*--------------------*/
+
+/*----------section-lot----------*/
+
+.lot {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 45px 0 28px 0;
+	color: #afafaf;
+}
+
+.lot__item {
+	width: 254px;
+	height: 260px;
+	border-top: 2px solid #afafaf;
+	border-left: 2px solid #afafaf;
+	border-right: 2px solid #afafaf;
+	border-bottom: 5px solid #3cc395;
+	box-sizing: border-box;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+.lot__item__img {
+	margin: 15px;
+}
+
+.lot__item__title {
+	font-size: 27px;
+	line-height: 25px;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+.lot__item__price {
+	display: inline-block;
+	margin-bottom: 30px;
+	font-size: 27px;
+	line-height: 25px;
+}
+
+.lot__item__btn {
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 20.19px;
+	line-height: 20.19px;
+	color: #fff;
+	background: #3cc395;
+	padding: 10px;
+	border-radius: 4px;
+	margin-left: 14px;
+	transition: 0.3s;
+}
+
+.lot__item__btn:hover {
+	text-decoration: underline;
+	background: #2da89b;
+}
+
+/*--------------------*/
+
+/*----------names----------*/
+
+.names {
+	background: #3cc395;
+}
+
+.box-names {
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.box-names__item {
+
+}
+
+.box-names__title {
+	font-size: 27px;
+	line-height: 25px; 
+	color: #fff;
+	margin-bottom: 27px;
+}
+
+.box-names__link {
+	font-family: 'Open Sans';
+	font-size: 15px;
+	line-height: 28px; 
+	color: #fff;
+	display: block;
+}
+
+/*----------footer----------*/
+
+footer {
+	background: #2da89b;
+}
+
+.copyright {
+	text-align: center;
+	color: #fff;
+	font-family: 'Open Sans';
+	padding: 10px 0;
+	font-size: 15px;
+	line-height: 28px; 
+}
+
+/*----------END----------*/
